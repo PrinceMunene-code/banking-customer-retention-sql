@@ -1,3 +1,6 @@
+-- Purpose:
+-- Identify active vs inactive customers based on recent transaction activity.
+-- Active customers are defined as having at least one transaction in the last 90 days.
 WITH recent_activity AS (
     SELECT DISTINCT
         a.customer_id
