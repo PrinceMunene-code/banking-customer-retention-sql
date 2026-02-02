@@ -1,3 +1,6 @@
+-- Purpose:
+-- Produced an executive summary of customer churn.
+-- To support retention prioritization and strategic decision-making.
 WITH last_transaction AS (
     SELECT
         a.customer_id,
@@ -30,5 +33,6 @@ SELECT
         / COUNT(*) AS DECIMAL(5,2)
     ) AS churn_rate_pct
 FROM customer_status;
+
 
 
