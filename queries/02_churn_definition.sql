@@ -1,3 +1,6 @@
+-- Purpose:
+-- Define customer churn behaviorally using transaction inactivity.
+-- A customer is considered churned if they have no transactions for 90 consecutive days.
 WITH last_transaction AS (
     SELECT
         a.customer_id,
